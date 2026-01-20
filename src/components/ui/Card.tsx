@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Button } from "@/components/ui/Button";
 
 interface CardProps {
   children: ReactNode;
@@ -25,6 +26,7 @@ export function Card({ children, className = "", title, description }: CardProps
           {description}
         </p>
       )}
+      <Button text="Click me" />
       {children}
     </div>
   );
