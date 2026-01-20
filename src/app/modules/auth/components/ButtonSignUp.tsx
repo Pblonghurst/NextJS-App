@@ -1,13 +1,13 @@
 'use client';
 
-import { login } from "@/lib/actions/auth";
+import { signUp } from "@/lib/actions/auth";
 
 // Props 
-interface ButtonLoginProps {
+interface ButtonSignUpProps {
   variant?: "primary" | "secondary" | "accent";
 }
 
-export const ButtonLogin = ({ variant = "primary" }: ButtonLoginProps) => {
+export const ButtonSignUp = ({ variant = "accent" }: ButtonSignUpProps) => {
   // Variant classes 
   const variantClasses = {
     primary: "bg-gradient-to-r from-primary to-primary/90 text-background hover:from-foreground hover:to-foreground/90 shadow-md hover:shadow-lg",
@@ -16,10 +16,10 @@ export const ButtonLogin = ({ variant = "primary" }: ButtonLoginProps) => {
   };
   return (
     <button
-      className={`${variantClasses[variant]} px-5 py-2 rounded-lg cursor-pointer transition-all duration-200 font-medium text-sm lg:text-base`}
-      onClick={() => login()}
+      className={`${variantClasses[variant]} px-6 py-2.5 rounded-lg cursor-pointer transition-all duration-200 font-medium text-sm lg:text-base`}
+      onClick={() => signUp()}
     >
-      Sign in
+      Sign up
     </button>
   );
 };
