@@ -65,7 +65,7 @@ export const Footer = () => {
                 </div>
 
                 {/* Copyright */}
-                <div className="border-t border-secondary/20 pt-8 text-center flex justify-between items-center">
+                <div className="border-t border-secondary/70 pt-8 text-center flex justify-between items-center">
                     <p className="text-xs!">© 2025 SaaS Product. All rights reserved.</p>
                     <p className="text-xs!">Privacy Policy</p>
                 </div>
