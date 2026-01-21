@@ -1,6 +1,6 @@
 'use client';
 
-import { signUp } from "@/lib/actions/auth";
+import { signUp } from "@/lib/auth";
 
 // Props 
 interface ButtonSignUpProps {
