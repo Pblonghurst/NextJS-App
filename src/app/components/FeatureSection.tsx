@@ -1,18 +1,36 @@
 import { ReactNode } from "react";
+import { Card } from "@/components/ui/Card";
+import { Zap, Shield, Smile, Clock } from "lucide-react";
 
 interface FeatureProps {
   title: string;
-  description: string;
-  icon?: ReactNode;
+  subtitle: string;
 }
 
-interface FeatureSectionProps {
-  title?: string;
-  subtitle?: string;
-  features: FeatureProps[];
-}
+export const FeatureSection = ({ title, subtitle }: FeatureProps) => {
+  const features = [
+    {
+      title: "Powerful Features",
+      description: "Access all the tools you need to manage your business efficiently.",
+      icon: <Zap className="h-6 w-6 text-accent" />,
+    },
+    {
+      title: "Secure & Reliable",
+      description: "Your data is protected with enterprise-grade security measures.",
+      icon: <Shield className="h-6 w-6 text-accent" />,
+    },
+    {
+      title: "Easy to Use",
+      description: "Intuitive interface designed for users of all skill levels.",
+      icon: <Smile className="h-6 w-6 text-accent" />,
+    },
+    {
+      title: "24/7 Support",
+      description: "Get help whenever you need it with our round-the-clock support team.",
+      icon: <Clock className="h-6 w-6 text-accent" />,
+    },
+  ];
 
-export const FeatureSection = ({ title, subtitle, features }: FeatureSectionProps) => {
   return (
     <section className="w-full shrink-0 py-24 bg-secondary/20">
       <div className="mx-auto max-w-7xl">
@@ -34,24 +52,13 @@ export const FeatureSection = ({ title, subtitle, features }: FeatureSectionProp
         {/* cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div
+            <Card
               key={index}
-              className="group p-6 rounded-2xl bg-secondary/40 border border-white/5 hover:border-secondary/30 transition-all duration-300 hover:bg-secondary/60 hover:-translate-y-1"
-            >
-              {/* Icon placeholder with gradient */}
-              {feature.icon ? (
-                <div className="mb-6 lg:mb-4">{feature.icon}</div>
-              ) : (
-                <div className="mb-6 h-12 w-12 rounded-lg bg-accent/10"></div>
-              )}
-              
-              <h3>
-                {feature.title}
-              </h3>
-              <p className="small">
-                {feature.description}
-              </p>
-            </div>
+              title={feature.title}
+              description={feature.description}
+              icon={feature.icon}
+              className="group hover:border-secondary/30 transition-all duration-300 hover:bg-secondary/60 hover:-translate-y-1"
+            />
           ))}
         </div>
       </div>
