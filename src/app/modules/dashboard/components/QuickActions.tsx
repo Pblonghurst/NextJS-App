@@ -20,8 +20,8 @@ export function QuickActions({ actions }: QuickActionsProps) {
   };
 
   return (
-    <div className="rounded-lg border border-foreground/10 bg-background/50 p-6 shadow-sm">
-      <h3 className="mb-4 text-lg font-semibold text-foreground">Quick Actions</h3>
+    <div className="rounded-lg border border-secondary/10 bg-primary/50 p-6 shadow-sm">
+      <h3 className="mb-4 text-lg font-semibold text-secondary">Quick Actions</h3>
       <div className="flex flex-wrap gap-3">
         {actions.map((action) => (
           <Button

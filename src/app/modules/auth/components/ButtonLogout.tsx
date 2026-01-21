@@ -6,7 +6,7 @@ import { logout } from "@/lib/actions/auth";
 export const ButtonLogout = () => {
     return (
         <button 
-            className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 cursor-pointer" 
+            className="bg-accent text-light-primary px-4 py-2 rounded-md hover:bg-accent/90 cursor-pointer transition-colors" 
             onClick={() => logout()}>
             Logout
         </button>

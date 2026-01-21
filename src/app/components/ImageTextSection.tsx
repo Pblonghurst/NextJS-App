@@ -7,35 +7,41 @@ interface ImageTextSectionProps {
 export const ImageTextSection = ({ 
   title, 
   description, 
-  imagePosition = "left" 
 }: ImageTextSectionProps) => {
-  const isImageLeft = imagePosition === "left";
 
   return (
-    <div className="mx-auto max-w-7xl">
-      <div className={`flex flex-col items-center gap-8 lg:flex-row lg:gap-12 ${isImageLeft ? "" : "lg:flex-row-reverse"}`}>
-        {/* Image placeholder */}
-        <div className="w-full shrink-0 lg:w-1/2">
-          <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-foreground/10 bg-gradient-to-br from-primary/20 via-accent/20 to-primary/10 backdrop-blur-sm">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-gradient-to-br from-primary to-accent opacity-60"></div>
-                <p className="text-sm font-medium text-foreground/50">Image Placeholder</p>
-              </div>
+    <section className="relative w-full px-4 py-24 lg:py-32">
+        <div className='max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center '>
+          {/* Image placeholder */}
+          <div className="w-full bg-primary/20 h-full relative flex justify-end items-start flex-col aspect-4/5 rounded-2xl overflow-hidden shadow-2xl border border-secondary/5">
+            <img src="/mountain2.avif" alt="Image" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/50 to-transparent"></div>
+            <div className="absolute bottom-6 left-6 w-full flex flex-col z-10">
+              <p className="small">Image Placeholder</p>
+              <h3 className="mb-0!">Where calm meets productivity.</h3>
+            </div>
+          </div>
+          
+          {/* Text content */}
+          <div className="w-full  ">
+            {/* Title */}
+            <h2 className="mb-4 text-3xl font-bold tracking-tight text-secondary md:text-4xl lg:text-5xl">
+              {title}
+            </h2>
+            {/* Line */}
+            <div className="w-16 h-1 bg-accent/40 rounded-full mb-6 mt-6 "></div>
+            {/* Description */}
+            <div className="flex flex-col gap-6">
+              <p className="text-base leading-relaxed text-secondary/70 md:text-lg lg:text-xl">
+                {description}
+              </p>
+
+                <p className="text-base leading-relaxed text-secondary/70 md:text-lg lg:text-xl">
+                  {description}
+                </p>
             </div>
           </div>
         </div>
-
-        {/* Text content */}
-        <div className="w-full lg:w-1/2">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
-            {title}
-          </h2>
-          <p className="text-base leading-relaxed text-foreground/70 md:text-lg lg:text-xl">
-            {description}
-          </p>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };

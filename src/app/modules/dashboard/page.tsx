@@ -66,12 +66,12 @@ export default async function DashboardPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <header className="border-b border-foreground/10 bg-background/50 px-4 py-4">
+    <div className="min-h-screen bg-primary">
+      <header className="border-b border-secondary/10 bg-primary/50 px-4 py-4">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
-          <h1 className="text-2xl font-bold text-foreground">Dashboard</h1>
+          <h1 className="text-2xl font-bold text-secondary">Dashboard</h1>
           <nav className="flex items-center gap-4">
-            <span className="text-sm text-foreground/60">
+            <span className="text-sm text-secondary/60">
               {session.user.name || session.user.email}
             </span>
             <ButtonLogout />
@@ -80,10 +80,10 @@ export default async function DashboardPage() {
       </header>
       <main className="mx-auto max-w-7xl px-4 py-8">
         <div className="mb-8">
-          <h2 className="text-2xl font-semibold text-foreground">
+          <h2 className="text-2xl font-semibold text-secondary">
             Welcome back, {session.user.name || "User"}!
           </h2>
-          <p className="mt-2 text-foreground/60">
+          <p className="mt-2 text-secondary/60">
             Here's what's happening with your account today.
           </p>
         </div>
@@ -99,7 +99,7 @@ export default async function DashboardPage() {
         <div className="grid gap-6 lg:grid-cols-3">
           <div className="lg:col-span-2">
             <Card title="Overview" description="Your account at a glance">
-              <p className="text-sm text-foreground/70">
+              <p className="text-sm text-secondary/70">
                 This is your main dashboard overview. You can add charts, graphs,
                 and other visualizations here.
               </p>

@@ -11,18 +11,18 @@ interface CardProps {
 export function Card({ children, className = "", title, description }: CardProps) {
   return (
     <div
-      className={`rounded-lg border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 ${className}`}
+      className={`rounded-lg border border-secondary/10 bg-primary/80 p-6 shadow-sm ${className}`}
     >
       {/* title */}
       {title && (
-        <h3 className="mb-2 text-lg font-semibold text-black dark:text-zinc-50">
+        <h3 className="mb-2">
           {title}
         </h3>
       )}
       
       {/* description */}
       {description && (
-        <p className="mb-4 text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="mb-4">
           {description}
         </p>
       )}
