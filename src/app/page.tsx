@@ -1,11 +1,11 @@
 "use server";
 
 import { auth } from "@/auth";
-import { Hero } from "@/app/components/Hero";
-import { FeatureSection } from "@/app/components/FeatureSection";
-import { ImageTextSection } from "./components/ImageTextSection"; 
-import { ButtonLogin } from "./modules/auth/components/ButtonLogin";
-import { ButtonSignUp } from "./modules/auth/components/ButtonSignUp";
+import { Hero } from "@/app/modules/landing/Hero";
+import { FeatureSection } from "@/app/modules/landing/FeatureSection";
+import { ImageTextSection } from "./modules/landing/ImageTextSection"; 
+import { ButtonLogin } from "./modules/auth/ButtonLogin";
+import { ButtonSignUp } from "./modules/auth/ButtonSignUp";
 import { Footer } from "@/components/global/Footer";
 import { Header } from "@/components/global/Header";
 
