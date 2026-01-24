@@ -2,14 +2,14 @@ import { TrendingDown, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 
 export interface StockCardProps {
-  symbol: string;
-  name: string;
-  price: number;
-  change: number; // percent, can be negative
+  symbol?: string;
+  name?: string;
+  price?: number;
+  change?: number; // percent, can be negative
 }
 
 export function StockCard({ symbol, name, price, change }: StockCardProps) {
-  const isUp = change >= 0;
+  const isUp = change && change >= 0;
   const Icon = isUp ? TrendingUp : TrendingDown;
 
   return (
@@ -28,7 +28,7 @@ export function StockCard({ symbol, name, price, change }: StockCardProps) {
           }`}
         >
           <Icon className="h-4 w-4" />
-          <span>{isUp ? "+" : ""}{change.toFixed(2)}%</span>
+          <span>{isUp ? "+" : ""}{change}%</span>
         </div>
       </div>
 
@@ -36,7 +36,7 @@ export function StockCard({ symbol, name, price, change }: StockCardProps) {
         <div>
           <p className="text-xs text-light-primary/60">Price</p>
           <p className="mt-1 text-3xl font-bold text-secondary">
-            ${price.toFixed(2)}
+            ${price}
           </p>
         </div>
 

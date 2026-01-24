@@ -1,6 +1,6 @@
 'use client'
 import { useAppDispatch, useAppSelector } from '@/lib/hooks'
-import { increment } from '@/store/counterSlice'
+import { increment } from '@/store/slices/counterSlice'
 import { Button } from "@/components/ui/Button";
 
 export const Counter = () => {
