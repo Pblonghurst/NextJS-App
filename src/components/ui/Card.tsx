@@ -11,7 +11,7 @@ interface CardProps {
 export function Card({ children, className = "", title, description, icon }: CardProps) {
   return (
     <div
-      className='group p-6 rounded-2xl bg-secondary/40 border border-white/5 hover:border-primary/30 transition-all duration-300 hover:bg-secondary/60 hover:-translate-y-1'
+      className={`group p-6 rounded-2xl bg-secondary/40 border border-white/5 hover:border-primary/30 transition-all duration-300 hover:bg-secondary/60 hover:-translate-y-1 ${className}`}
     > 
       {/* icon */}
       {icon && (
