@@ -1,12 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from './slices/counterSlice'
-import stocksReducer from './slices/stocksSlice'
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       counter: counterReducer,
-      stocks: stocksReducer
     },
   })
 }

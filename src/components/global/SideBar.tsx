@@ -15,7 +15,6 @@ export const SideBar = () => {
               <nav className="flex flex-col gap-2">
                   <Link className="rounded-xl px-4 py-3 bg-secondary/20 hover:bg-secondary/30 border border-white/5 transition-colors" href="/dashboard">Dashboard</Link>
                   <Link className="rounded-xl px-4 py-3 bg-secondary/20 hover:bg-secondary/30 border border-white/5 transition-colors" href="/marketing">Marketing</Link>
-                  <Link className="rounded-xl px-4 py-3 bg-secondary/20 hover:bg-secondary/30 border border-white/5 transition-colors" href="/portfolio">Portfolio</Link>
               </nav>
 
               <div className="mt-auto pt-6 border-t border-secondary/60">
