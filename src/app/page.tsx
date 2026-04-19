@@ -1,6 +1,3 @@
-"use server";
-
-import { auth } from "@/auth";
 import { Hero } from "@/app/modules/landing/Hero";
 import { FeatureSection } from "@/app/modules/landing/FeatureSection";
 import { ImageTextSection } from "./modules/landing/ImageTextSection"; 
@@ -9,8 +6,7 @@ import { ButtonSignUp } from "./modules/auth/ButtonSignUp";
 import { Footer } from "@/components/global/Footer";
 import { Header } from "@/components/global/Header";
 
-export default async function Home() {
-  const session = await auth();
+export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-primary">
       {/* Header */}
